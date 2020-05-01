@@ -32,13 +32,13 @@ const Shop = () => {
         let count = 1;
         let newCart;
         if(sameProduct){
-             count = sameProduct.quantuty + 1;
-             sameProduct.quantuty = count;
+             count = sameProduct.quantity + 1;
+             sameProduct.quantity = count;
              const others = cart.filter(pd => pd.key !== toBeAddedKey);
              newCart = [...others, sameProduct];
         }
         else{
-            product.quantuty = 1;
+            product.quantity = 1;
             newCart = [...cart, product];
         }
         setCart(newCart);
